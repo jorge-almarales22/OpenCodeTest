@@ -9,18 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
         interval: 200 
     });
 
-    // Carrusel
-    const slider = document.getElementById('imageSlider');
-    function autoScroll() {
-        if (!slider) return;
-        const imgWidth = slider.querySelector('img').clientWidth;
-        slider.scrollBy({ left: imgWidth, behavior: 'smooth' });
-        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-            slider.scrollTo({ left: 0, behavior: 'smooth' });
-        }
-    }
-    
-    if (slider) {
-        setInterval(autoScroll, 3000);
-    }
+    // Swiper Carousel
+    const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 });
+

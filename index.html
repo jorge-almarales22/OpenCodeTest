@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -16,6 +17,7 @@
             <ul class="nav-links">
                 <li><a href="#about">Sobre mí</a></li>
                 <li><a href="#services">Servicios</a></li>
+                <li><a href="#experience">Experiencia</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
@@ -30,10 +32,16 @@
 
         <section id="carousel">
             <h3>Proyectos Destacados</h3>
-            <div class="slider" id="imageSlider">
-                <img src="https://picsum.photos/seed/ai1/800/400" alt="Proyecto IA 1">
-                <img src="https://picsum.photos/seed/ai2/800/400" alt="Proyecto IA 2">
-                <img src="https://picsum.photos/seed/ai3/800/400" alt="Proyecto IA 3">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://picsum.photos/seed/ai1/800/400" alt="Proyecto IA 1"></div>
+                    <div class="swiper-slide"><img src="https://picsum.photos/seed/ai2/800/400" alt="Proyecto IA 2"></div>
+                    <div class="swiper-slide"><img src="https://picsum.photos/seed/ai3/800/400" alt="Proyecto IA 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </section>
 
@@ -43,26 +51,71 @@
             <p>Egresado de la <strong>Universidad Popular del Cesar</strong>, combino mi formación técnica sólida con una especialización práctica en soluciones de Inteligencia Artificial para potenciar el rendimiento y la eficiencia de empresas.</p>
         </section>
 
+        <section id="experience">
+            <h3>Experiencia Destacada</h3>
+            <div class="experience-list">
+                <div class="card">
+                    <h4>Desarrollador de IA</h4>
+                    <p>Implementación de modelos predictivos y optimización de datos en diversas industrias.</p>
+                </div>
+                <div class="card">
+                    <h4>Ingeniero de Software Senior</h4>
+                    <p>Diseño y construcción de arquitecturas escalables para aplicaciones web empresariales.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="features" class="reveal">
             <h3>¿Por qué elegir mis soluciones?</h3>
             <div class="feature-grid">
                 <div class="feature-item">
-                    <img src="https://picsum.photos/seed/tech1/200/200" alt="Tecnología">
                     <h4>Innovación</h4>
                     <p>Implementación de las últimas tecnologías en IA.</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://picsum.photos/seed/tech2/200/200" alt="Eficiencia">
                     <h4>Eficiencia</h4>
                     <p>Optimización de procesos para ahorrar tiempo y recursos.</p>
                 </div>
                 <div class="feature-item">
-                    <img src="https://picsum.photos/seed/tech3/200/200" alt="Escalabilidad">
                     <h4>Escalabilidad</h4>
                     <p>Soluciones diseñadas para crecer junto a tu negocio.</p>
                 </div>
             </div>
         </section>
+
+        <section id="services">
+            <h3>Mis Servicios</h3>
+            <div class="service-cards">
+                <div class="card reveal">
+                    <h4>Consultoría IA</h4>
+                    <p>Estrategias personalizadas para integrar IA en tus procesos.</p>
+                </div>
+                <div class="card reveal">
+                    <h4>Desarrollo de Software</h4>
+                    <p>Soluciones de software robustas, escalables y eficientes.</p>
+                </div>
+                <div class="card reveal">
+                    <h4>Modelado de Datos</h4>
+                    <p>Análisis y optimización de datos para modelos predictivos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h3>Contacto</h3>
+        <p>¿Listo para llevar tu proyecto al siguiente nivel?</p>
+        <p>Email: jorge.almarales@email.com</p>
+    </footer>
+
+    <!-- ScrollReveal, Swiper y Scripts -->
+    <script src="node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
 
         <section id="services">
             <h3>Mis Servicios</h3>
